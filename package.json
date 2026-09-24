@@ -1,0 +1,9 @@
+{
+  "name": "jarvis-ai",
+  "version": "2.0.0",
+  "private": true,
+  "description": "JARVIS AI assistant for Vercel",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

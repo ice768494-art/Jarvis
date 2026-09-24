@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070d">
+  <title>JARVIS AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="arc-reactor"><span></span></div>
+        <div>
+          <strong>JARVIS</strong>
+          <small>AI ASSISTANT</small>
+        </div>
+      </div>
+
+      <button id="newChatBtn" class="side-btn">＋ New Chat</button>
+
+      <div class="side-section">
+        <div class="section-title">Quick Commands</div>
+        <button class="quick" data-prompt="What time is it right now?">🕒 Time</button>
+        <button class="quick" data-prompt="Give me a short summary of today's priorities.">⚡ Priorities</button>
+        <button class="quick" data-prompt="Give me three useful Python coding tips.">💻 Coding Tips</button>
+        <button class="quick" data-prompt="Explain artificial intelligence simply.">🧠 Explain AI</button>
+      </div>
+
+      <div class="side-section">
+        <div class="section-title">Local Notes</div>
+        <textarea id="notes" placeholder="Write notes for this session..."></textarea>
+        <button id="saveNotesBtn" class="side-btn">Save Notes</button>
+      </div>
+
+      <div class="status-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>ONLINE</strong>
+          <small>Voice + AI ready</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">STARK INDUSTRIES // PERSONAL AI</span>
+          <h1>JARVIS <span>AI</span></h1>
+        </div>
+        <div class="top-actions">
+          <button id="voiceToggle" class="icon-btn" title="Toggle voice replies">🔊</button>
+          <button id="clearBtn" class="icon-btn" title="Clear chat">🗑️</button>
+        </div>
+      </header>
+
+      <section id="chat" class="chat">
+        <div class="welcome">
+          <div class="welcome-reactor">◉</div>
+          <h2>Good evening.</h2>
+          <p>JARVIS is online. Ask a question, type a command, or use the microphone.</p>
+          <div class="chips">
+            <button class="chip" data-prompt="Introduce yourself and tell me what you can do.">What can you do?</button>
+            <button class="chip" data-prompt="Help me build a website.">Build a website</button>
+            <button class="chip" data-prompt="Help me learn Python.">Learn Python</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="typing" class="typing hidden">
+        <span></span><span></span><span></span> JARVIS is thinking...
+      </div>
+
+      <form id="composer" class="composer">
+        <button type="button" id="micBtn" class="mic" title="Speak to JARVIS">🎙️</button>
+        <input id="message" autocomplete="off" placeholder="Talk to JARVIS..." />
+        <button type="submit" class="send">➤</button>
+      </form>
+      <div id="micStatus" class="mic-status"></div>
+      <footer>JARVIS AI • Your API key stays on the server.</footer>
+    </main>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
